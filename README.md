@@ -6,15 +6,19 @@ The setup of this runner container may look a bit un-intuitive but the main idea
 
 ## Setup:
 
-- Unzip the prefect_toy_single_container_example.zip
+- Clone this repo
 
-- cd into the prefect_toy_single_container_example folder
+        git clone git@github.com:madetech/prefect_exploration_toy_example.git
+
+- Change your dir to the newly cloned repo
+
+        cd prefect_exploration_toy_example
 
 - Build the container
 
     docker build -t new_prefect_img .
 
-- Start a installation container (to be able to mirror an internal folder into host)
+- Start a installation container (this will just be used to be able to mirror an internal folder in the host)
 
     docker run -it --name installation_container new_prefect_img
 
